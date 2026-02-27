@@ -17,3 +17,17 @@ El sistema extrae los pedidos de una cola de mensajería (SQS) mediante un servi
 2. Permisos configurados para acceder a AWS SQS.
 3. Base de datos PostgreSQL creada en Amazon RDS.
 
+# Pasos para ejecutar
+
+Abre tu terminal y ejecuta estos comandos en orden:
+
+```bash
+# 1. Crea y activa el entorno
+python -m venv coffee-env
+source coffee-env/bin/activate
+
+# 2. Instala las librerías
+pip install boto3 psycopg2-binary
+
+# 3. Inicia el programa
+python worker_sqs.py
